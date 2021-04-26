@@ -1,0 +1,71 @@
+<style>
+    .container {
+        background-color: #f7f3e9;
+    }
+    .name {
+        /* padding: 10px; */
+        text-align: center;
+        font-size: 1.8rem;
+        /* padding-bottom: 10px !important; */
+    }
+    .temp {        
+        text-align: center;
+        font-size: 5.0rem;
+        font-weight: 700;
+    }
+    
+    .temp_min_max {
+        display: flex;
+        justify-content: center;
+        font-size: 1.3rem;
+    }
+    
+    .co-ord {
+        padding-top: 50px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        font-size: 1.0rem;
+    }
+    .spacer  {
+        width: 10px;
+    }
+
+    .weather-container {
+        max-height: 600px;
+        height: 100vh;
+    }
+</style>
+
+<div class="container">
+    <app-search></app-search>
+    
+
+    <div class="weather-container">
+        <div class="name">{{weather.name}}, {{weather.country}}</div>
+        <div class="temp">{{weather.temp}}<sup>o</sup>C</div>
+        <div class="temp_min_max">
+            <div>
+                min:{{weather.temp_min}}<sup>o</sup>C
+            </div>
+
+            <div class="spacer"></div>
+            
+            <div>
+                max:{{weather.temp_max}}<sup>o</sup>C
+            </div>
+        </div>
+
+        <div class="co-ord">
+            <div>
+                longitude:{{weather.lon}}<sup>o</sup>
+            </div>
+
+            <div class="spacer"></div>
+            
+            <div>
+                latitude:{{weather.lat}}<sup>o</sup>
+            </div>
+        </div>
+    </div>
+</div>

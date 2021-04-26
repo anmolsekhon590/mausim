@@ -1,0 +1,33 @@
+<style>
+    .container {
+        width: 100%;
+        
+        padding: 10px 0px;
+    }
+    
+    .search-bar {
+        justify-content: center;
+        display: flex;
+        
+        width: 85%;
+        height: 30px;
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+
+    .form-group {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<div class="container">
+    
+        <form>
+            <div class="form-group">
+                <input class="search-bar" [(ngModel)]="input" name="input" placeholder="Search">
+                <button id="submit" (click)="search()">Submit</button>
+            </div>
+        </form>
+    
+</div>
