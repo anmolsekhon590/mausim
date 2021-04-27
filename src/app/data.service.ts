@@ -11,7 +11,7 @@ export class DataService {
   weather = {"name": "NULL", "temp": 0, "temp_min": 0, "temp_max": 0, "lon": 0, "lat": 0, "country": ""};
 
   retrieveCity(city:string) {
-    let obs = this.http.get<any>("http://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=3555c92ebb9a46d47a72fd004c7c7c62&units=metric");
+    let obs = this.http.get<any>("https://api.openweathermap.org/data/2.5/weather?q="+ city +"&appid=3555c92ebb9a46d47a72fd004c7c7c62&units=metric");
     
     obs.subscribe((response)=> {
       
